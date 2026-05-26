@@ -33,7 +33,7 @@ export default function LoginPage() {
       // =========================
 
       const response = await api.post(
-        "/auth/login",
+        "/api/auth/login",
         {
           email,
           password,

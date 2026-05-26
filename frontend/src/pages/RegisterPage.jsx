@@ -20,7 +20,7 @@ export default function RegisterPage() {
     try {
       setLoading(true);
 
-      await api.post("/auth/register", {
+      await api.post("/api/auth/register", {
         name,
         email,
         password,
