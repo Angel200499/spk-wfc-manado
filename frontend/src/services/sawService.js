@@ -4,7 +4,7 @@ export const calculateSAW = async (
   weights
 ) => {
   const response = await api.post(
-    "/saw",
+    "/api/saw",
     weights
   );
 
