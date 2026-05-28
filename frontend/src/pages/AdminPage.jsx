@@ -107,7 +107,7 @@ export default function AdminPage() {
       // =====================
 
       if (editId) {
-        await api.put(`/cafes/${editId}`, payload);
+        await api.put(`/api/cafes/${editId}`, payload);
 
         toast.success("Cafe berhasil diupdate 🔥");
       }
@@ -117,7 +117,7 @@ export default function AdminPage() {
       // =====================
 
       else {
-        await api.post("/cafes", payload);
+        await api.post("/api/cafes", payload);
 
         toast.success("Cafe berhasil ditambahkan ☕");
       }
@@ -140,7 +140,7 @@ export default function AdminPage() {
 
   const handleDelete = async (id) => {
     try {
-      await api.delete(`/cafes/${id}`);
+      await api.delete(`/api/cafes/${id}`);
 
       toast.success("Cafe berhasil dihapus");
 
