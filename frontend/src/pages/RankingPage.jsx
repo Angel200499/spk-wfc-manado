@@ -5,6 +5,7 @@ import api from "@/services/api";
 import DashboardLayout from "@/layouts/DashboardLayout";
 
 export default function RankingPage() {
+
   const [cafes, setCafes] = useState([]);
 
   useEffect(() => {
@@ -13,7 +14,9 @@ export default function RankingPage() {
 
   const fetchRanking = async () => {
     try {
-      const res = await api.post("/saw", {
+
+      // FIX ENDPOINT
+      const res = await api.post("/api/saw", {
         wifiWeight: 0.25,
         outletWeight: 0.2,
         comfortWeight: 0.25,
@@ -23,7 +26,9 @@ export default function RankingPage() {
       });
 
       setCafes(res.data);
+
     } catch (error) {
+
       console.log(error);
     }
   };
@@ -36,12 +41,16 @@ export default function RankingPage() {
         </h1>
 
         <div className="space-y-5">
-          {cafes.map((cafe) => (
+
+          {cafes?.map((cafe) => (
+
             <div
               key={cafe.id}
               className="bg-white/5 border border-white/10 rounded-[30px] p-6 flex items-center justify-between"
             >
+
               <div className="flex items-center gap-5">
+
                 <div className="text-4xl font-black text-amber-400">
                   #{cafe.rank}
                 </div>
@@ -61,18 +70,27 @@ export default function RankingPage() {
                     {cafe.address}
                   </p>
                 </div>
+
               </div>
 
               <div className="text-right">
+
                 <p className="text-zinc-400">
                   Final Score
                 </p>
 
                 <h2 className="text-4xl font-black text-amber-400">
-                {(cafe.score * 100).toFixed(0)}%                </h2>
+
+                  {((cafe.score || 0) * 100).toFixed(0)}%
+
+                </h2>
+
               </div>
+
             </div>
+
           ))}
+
         </div>
       </div>
     </DashboardLayout>

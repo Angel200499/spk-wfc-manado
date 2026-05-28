@@ -33,7 +33,7 @@ export default function AdminPage() {
 
   const fetchCafes = async () => {
     try {
-      const response = await api.get("/cafes");
+      const response = await api.get("/api/cafes");
 
       setCafes(response.data);
     } catch (error) {

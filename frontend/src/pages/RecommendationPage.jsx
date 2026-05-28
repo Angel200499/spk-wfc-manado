@@ -12,10 +12,14 @@ export default function RecommendationPage() {
 
   const fetchCafe = async () => {
     try {
-      const res = await api.get("/cafes");
+
+      // FIX ENDPOINT
+      const res = await api.get("/api/cafes");
 
       setCafes(res.data);
+
     } catch (error) {
+
       console.log(error);
     }
   };
