@@ -19,11 +19,15 @@ export default function LandingPage() {
 
       <HeroSection />
 
+      <WeatherCard />
+
       <FeatureSection />
 
       <AboutSection />
 
       <CafeSection />
+
+      <Footer />
     </div>
   );
 }
