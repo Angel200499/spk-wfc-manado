@@ -10,6 +10,8 @@ import AboutSection from "@/components/landing/AboutSection";
 
 import CafeSection from "@/components/landing/CafeSection";
 
+import WeatherCard from "@/components/WeatherCard";
+
 export default function LandingPage() {
   return (
     <div>
