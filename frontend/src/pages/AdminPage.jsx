@@ -20,7 +20,7 @@ export default function AdminPage() {
     address: "",
     imageUrl: "",
     wifiSpeed: "",
-    powerOutlet: "",
+    StopKontak: "",
     comfort: "",
     noiseLevel: "",
     averagePrice: "",
