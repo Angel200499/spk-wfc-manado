@@ -20,7 +20,7 @@ export default function AdminPage() {
     address: "",
     imageUrl: "",
     wifiSpeed: "",
-    StopKontak: "",
+    powerOutlet: "",
     comfort: "",
     noiseLevel: "",
     averagePrice: "",
@@ -268,7 +268,7 @@ export default function AdminPage() {
               name="powerOutlet"
               value={form.powerOutlet}
               onChange={handleChange}
-              placeholder="Power Outlet"
+              placeholder="StopKontak"
               className="bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-amber-400"
             />
 
