@@ -386,7 +386,7 @@ export default function AdminPage() {
 
                     <div className="bg-white/5 rounded-2xl p-4">
                       <p className="text-zinc-400 text-sm">
-                        Outlet
+                        Stopkontak
                       </p>
 
                       <h3 className="text-white font-black text-xl">
